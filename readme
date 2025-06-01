@@ -1,0 +1,5 @@
+Endpoint
+
+[/panen/{tahun} ](http://127.0.0.1:8000/panen/?komoditas_id=6&tahun=2024)= Menampilkan data hasil panen untuk semua kecamatan pada tahun tertentu.
+/tren?komoditas_id=ID Menampilkan tren produksi dari satu komoditas di semua kecamatan.
+/rekomendasi = Menampilkan semua rekomendasi penanaman jenis tanaman berdasarkan kecamatan.
