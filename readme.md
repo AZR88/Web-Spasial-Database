@@ -1,7 +1,3 @@
-Berikut versi **sederhana dan ringkas** dari `README.md` untuk backend:
-
----
-
 # 🌾 Backend Sistem Informasi Hasil Panen
 
 Backend aplikasi untuk menampilkan data hasil panen dan rekomendasi tanaman berbasis tren produksi, dibangun dengan **FastAPI** dan **PostgreSQL + PostGIS**.
@@ -57,4 +53,3 @@ uvicorn main:app --reload
 
 ---
 
-Kalau ingin saya bantu generate `requirements.txt`, tinggal bilang saja.
