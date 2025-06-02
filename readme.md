@@ -30,12 +30,12 @@ uvicorn main:app --reload
 
 ### 1. Data Panen
 
-`GET /panen/?komoditas_id=6&tahun=2024`
+`GET /panen/?komoditas_id={id}&tahun={tahun}`
 → Menampilkan hasil panen per kecamatan berdasarkan komoditas & tahun.
 
 ### 2. Tren Produksi
 
-`GET /tren/?komoditas_id=6`
+`GET /komoditas_by_kecamatan/?komoditas_id={id}`
 → Menampilkan tren produksi komoditas dari tahun ke tahun untuk tiap kecamatan.
 
 ### 3. Rekomendasi Tanaman
