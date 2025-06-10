@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tren Komoditas - Visualisasi Panen</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard Visualisasi Panen & Rekomendasi Tanaman</h1>
+    </header>
+    <nav>
+        <a href="landing.html" class="nav-button">Home</a>
+        <a href="panen.html" class="nav-button">Hasil Panen</a>
+        <a href="rekomendasi.html" class="nav-button">Rekomendasi</a>
+        <a href="tren.html" class="nav-button active">Tren Komoditas</a>
+        <a href="usulan.html" class="nav-button">Buat Usulan</a>
+    </nav>
+
+    <main>
+        <section class="content-section">
+            <h2>Sebaran Kecamatan berdasarkan Komoditas</h2>
+            <div class="controls">
+                <label for="tren-nama-kecamatan">Nama Kecamatan:</label>
+                <input
+                    type="text"
+                    id="tren-nama-kecamatan"
+                    placeholder="Contoh: Bululawang"
+                    style="text-transform: capitalize;"
+                    required
+                />
+            
+                <label for="tren-tahun">Tahun:</label>
+                <input
+                    type="number"
+                    id="tren-tahun"
+                    placeholder="Contoh: 2024"
+                    min="2000"
+                    max="2100"
+                    required
+                />
+            
+                <button id="fetch-tren">Tampilkan Tren</button>
+            </div>
+            
+            
+            <div id="tren-map" class="map-container"></div>
+            <div id="tren-info" class="info-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aplikasi Visualisasi Panen</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script src="js/main.js"></script>
+    <script src="js/tren.js"></script>
+</body>
+</html>

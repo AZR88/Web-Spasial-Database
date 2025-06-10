@@ -1,0 +1,177 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    padding: 0.5em;
+    text-align: center;
+}
+
+nav .nav-button { /* Changed from nav button */
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none; /* For <a> tags */
+    display: inline-block; /* For proper padding and margin */
+}
+
+nav .nav-button:hover,
+nav .nav-button.active { /* Style for active page link */
+    background-color: #007bff; /* Highlight active link */
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content-section { /* New class for main content area of each page */
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.content-section h2 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.controls label {
+    margin-right: 5px;
+}
+
+.controls input[type="number"],
+.controls input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.controls button,
+form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.controls button:hover,
+form button:hover {
+    background-color: #0056b3;
+}
+
+.map-container {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.info-container,
+.message-container {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
+
+#usulan-form div {
+    margin-bottom: 15px;
+}
+
+#usulan-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#usulan-form input {
+    width: calc(100% - 16px); /* Account for padding */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Styles for landing page content */
+.content-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.content-section ul li {
+    margin-bottom: 10px;
+}
+
+.leaflet-control.legend {
+    background: white;
+    padding: 10px;
+    line-height: 18px;
+    color: #333;
+    font-size: 13px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.leaflet-control.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.8;
+}
+
+
+
+input {
+    width: 200px;
+    height: 20px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: auto;
+}

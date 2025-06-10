@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Usulan Panen - Visualisasi Panen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard Visualisasi Panen & Rekomendasi Tanaman</h1>
+    </header>
+    <nav>
+        <a href="landing.html" class="nav-button">Home</a>
+        <a href="panen.html" class="nav-button">Hasil Panen</a>
+        <a href="rekomendasi.html" class="nav-button">Rekomendasi</a>
+        <a href="tren.html" class="nav-button">Tren Komoditas</a>
+        <a href="usulan.html" class="nav-button active">Buat Usulan</a>
+    </nav>
+
+    <main>
+        <section class="content-section">
+            <h2>Buat Usulan Panen Baru</h2>
+            <form id="usulan-form">
+                <div>
+                    <label for="usulan-id">ID Usulan:</label>
+                    <input type="text" id="usulan-id" name="id_usulan" required>
+                </div>
+                <div>
+                    <label for="usulan-nama">Nama Pengusul:</label>
+                    <input type="text" id="usulan-nama" name="nama_pengusul" required>
+                </div>
+                <div>
+                    <label for="usulan-tahun">Tahun Usulan:</label>
+                    <input type="number" id="usulan-tahun" name="tahun_usulan" required>
+                </div>
+                <div>
+                    <label for="usulan-status-validasi">Status Validasi:</label>
+                    <input type="text" id="usulan-status-validasi" name="status_validasi" value="pending" required>
+                </div>
+                <div>
+                    <label for="usulan-status-validasi-1">Status Validasi 1:</label>
+                    <input type="text" id="usulan-status-validasi-1" name="status_validasi_1" value="pending" required>
+                </div>
+                <div>
+                    <label for="usulan-tanggal">Tanggal Usulan:</label>
+                    <input type="date" id="usulan-tanggal" name="tanggal_usulan" required>
+                </div>
+                <div>
+                    <label for="usulan-id-kecamatan">ID Kecamatan:</label>
+                    <input type="text" id="usulan-id-kecamatan" name="id_kecamatan" required>
+                </div>
+                <div>
+                    <label for="usulan-id-komoditas">ID Komoditas:</label>
+                    <input type="text" id="usulan-id-komoditas" name="id_komoditas" required>
+                </div>
+                <button type="submit">Kirim Usulan</button>
+            </form>
+            <div id="usulan-message" class="message-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aplikasi Visualisasi Panen</p>
+    </footer>
+    <script src="js/main.js"></script> <script src="js/usulan.js"></script>
+</body>
+</html>
