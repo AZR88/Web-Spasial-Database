@@ -8,26 +8,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const formData = new FormData(usulanForm);
         const data = {};
+
+        // Ambil dan ubah data sesuai tipe yang diminta oleh API
         formData.forEach((value, key) => {
-            // Convert 'tahun_usulan' to number
-            if (key === 'tahun_usulan') {
+            if (['tahun', 'id_kecamatan', 'id_komoditas'].includes(key)) {
                 data[key] = parseInt(value, 10);
+            } else if (key === 'total_produksi') {
+                data[key] = parseFloat(value);
             } else {
-                data[key] = value;
+                data[key] = value.trim();
             }
         });
 
-        // Basic validation for date (must not be empty)
-        if (!data.tanggal_usulan) {
-            usulanMessageDiv.innerHTML = '<p style="color: red;">Tanggal Usulan tidak boleh kosong.</p>';
-            return;
-        }
-         // Basic validation for year (must be a number)
-        if (isNaN(data.tahun_usulan)) {
-            usulanMessageDiv.innerHTML = '<p style="color: red;">Tahun Usulan harus berupa angka.</p>';
+        // Validasi: semua field harus diisi
+        if (!data.nama_pengusul || !data.satuan) {
+            usulanMessageDiv.innerHTML = '<p style="color: red;">Semua field harus diisi.</p>';
             return;
         }
 
+        // Validasi angka
+        if (
+            isNaN(data.tahun) ||
+            isNaN(data.id_kecamatan) ||
+            isNaN(data.id_komoditas) ||
+            isNaN(data.total_produksi)
+        ) {
+            usulanMessageDiv.innerHTML = '<p style="color: red;">Pastikan semua angka seperti tahun, ID dan total produksi valid.</p>';
+            return;
+        }
 
         usulanMessageDiv.innerHTML = '<p>Mengirim usulan...</p>';
 
@@ -47,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             usulanMessageDiv.innerHTML = `<p style="color: green;">${result.message}</p>`;
-            usulanForm.reset(); // Clear the form
+            usulanForm.reset(); // Reset form setelah sukses
         } catch (error) {
             console.error('Error submitting usulan:', error);
             usulanMessageDiv.innerHTML = `<p style="color: red;">Terjadi kesalahan: ${error.message}</p>`;

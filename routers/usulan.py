@@ -6,14 +6,12 @@ from datetime import date
 router = APIRouter(prefix="/usulan", tags=["Usulan"])
 
 class UsulanPanen(BaseModel):
-    id_usulan: str
     nama_pengusul: str
-    tahun_usulan: int
-    status_validasi: str
-    status_validasi_1: str  
-    tanggal_usulan: date
-    id_kecamatan: str
-    id_komoditas: str
+    tahun: int 
+    id_kecamatan: int
+    id_komoditas: int
+    total_produksi: float
+    satuan: str
 
 @router.post("/")
 def buat_usulan(data: UsulanPanen):

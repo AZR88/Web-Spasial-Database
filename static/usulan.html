@@ -23,37 +23,95 @@
             <h2>Buat Usulan Panen Baru</h2>
             <form id="usulan-form">
                 <div>
-                    <label for="usulan-id">ID Usulan:</label>
-                    <input type="text" id="usulan-id" name="id_usulan" required>
-                </div>
-                <div>
                     <label for="usulan-nama">Nama Pengusul:</label>
                     <input type="text" id="usulan-nama" name="nama_pengusul" required>
-                </div>
-                <div>
-                    <label for="usulan-tahun">Tahun Usulan:</label>
-                    <input type="number" id="usulan-tahun" name="tahun_usulan" required>
-                </div>
-                <div>
-                    <label for="usulan-status-validasi">Status Validasi:</label>
-                    <input type="text" id="usulan-status-validasi" name="status_validasi" value="pending" required>
-                </div>
-                <div>
-                    <label for="usulan-status-validasi-1">Status Validasi 1:</label>
-                    <input type="text" id="usulan-status-validasi-1" name="status_validasi_1" value="pending" required>
-                </div>
-                <div>
-                    <label for="usulan-tanggal">Tanggal Usulan:</label>
-                    <input type="date" id="usulan-tanggal" name="tanggal_usulan" required>
-                </div>
-                <div>
-                    <label for="usulan-id-kecamatan">ID Kecamatan:</label>
-                    <input type="text" id="usulan-id-kecamatan" name="id_kecamatan" required>
-                </div>
-                <div>
-                    <label for="usulan-id-komoditas">ID Komoditas:</label>
-                    <input type="text" id="usulan-id-komoditas" name="id_komoditas" required>
-                </div>
+                  </div>
+                
+                  <div>
+                    <label for="usulan-tahun">Tahun:</label>
+                    <input type="number" id="usulan-tahun" name="tahun" required>
+                  </div>
+                
+                  <div>
+                    <label for="usulan-id-kecamatan">Kecamatan:</label>
+                    <select id="usulan-id-kecamatan" name="id_kecamatan" required>
+                      <option value="1">1 - Ampelgading</option>
+                      <option value="2">2 - Bantur</option>
+                      <option value="3">3 - Bululawang</option>
+                      <option value="4">4 - Dampit</option>
+                      <option value="5">5 - Dau</option>
+                      <option value="6">6 - Donomulyo</option>
+                      <option value="7">7 - Gedangan</option>
+                      <option value="8">8 - Gondanglegi</option>
+                      <option value="9">9 - Jabung</option>
+                      <option value="10">10 - Kalipare</option>
+                      <option value="11">11 - Karangploso</option>
+                      <option value="12">12 - Kasembon</option>
+                      <option value="13">13 - Kepanjen</option>
+                      <option value="14">14 - Kromengan</option>
+                      <option value="15">15 - Lawang</option>
+                      <option value="16">16 - Ngajum</option>
+                      <option value="17">17 - Ngantang</option>
+                      <option value="18">18 - Pagak</option>
+                      <option value="19">19 - Pagelaran</option>
+                      <option value="20">20 - Pakis</option>
+                      <option value="21">21 - Pakisaji</option>
+                      <option value="22">22 - Poncokusumo 2024</option>
+                      <option value="23">23 - Pujon</option>
+                      <option value="24">24 - Singosari</option>
+                      <option value="25">25 - Sumbermanjing</option>
+                      <option value="26">26 - Sumberpucung</option>
+                      <option value="27">27 - Tajinan</option>
+                      <option value="28">28 - Tirtoyudo</option>
+                      <option value="29">29 - Tumpang</option>
+                      <option value="30">30 - Turen</option>
+                      <option value="31">31 - Wagir</option>
+                      <option value="32">32 - Wajak</option>
+                      <option value="33">33 - Wonosari</option>
+                    </select>
+                  </div>
+                
+                  <div>
+                    <label for="usulan-id-komoditas">Komoditas:</label>
+                    <select id="usulan-id-komoditas" name="id_komoditas" required>
+                        <option value="1">1 - Bawang Daun</option>
+                        <option value="2">2 - Bawang Merah</option>
+                        <option value="3">3 - Bawang Putih</option>
+                        <option value="4">4 - Bayam</option>
+                        <option value="5">5 - Buncis</option>
+                        <option value="6">6 - Cabai Rawit</option>
+                        <option value="7">7 - Kacang Panjang</option>
+                        <option value="8">8 - Kangkung</option>
+                        <option value="9">9 - Kembang Kol</option>
+                        <option value="10">10 - Kentang</option>
+                        <option value="11">11 - Ketimun</option>
+                        <option value="12">12 - Kubis</option>
+                        <option value="13">13 - Labu Siam</option>
+                        <option value="14">14 - Melon</option>
+                        <option value="15">15 - Paprika</option>
+                        <option value="16">16 - Petsai/Sawi</option>
+                        <option value="17">17 - Semangka</option>
+                        <option value="18">18 - Stroberi</option>
+                        <option value="19">19 - Terung</option>
+                        <option value="20">20 - Tomat</option>
+                        <option value="21">21 - Wortel</option>
+                        <option value="22">22 - Cabai Besar/TW/Teropong</option>
+                        <option value="23">23 - Cabai Keriting</option>
+                    </select>
+                  </div>
+                
+                  <div>
+                    <label for="usulan-produksi">Total Produksi:</label>
+                    <input type="number" id="usulan-produksi" name="total_produksi" required>
+                  </div>
+                
+                  <div>
+                    <label for="usulan-satuan">Satuan:</label>
+                    <input type="text" id="usulan-satuan" name="satuan" placeholder="contoh: kw" required>
+                  </div>
+                
+           
+
                 <button type="submit">Kirim Usulan</button>
             </form>
             <div id="usulan-message" class="message-container"></div>

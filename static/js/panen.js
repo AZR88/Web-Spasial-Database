@@ -130,15 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 );
 
                                 // Label permanen di tengah
-                                const center = layer.getBounds().getCenter();
-                                const label = L.tooltip({
-                                    permanent: true,
-                                    direction: 'center',
-                                    className: 'kecamatan-label'
-                                })
-                                .setContent(feature.properties.nama_kecamatan)
-                                .setLatLng(center);
-                                panenMap.addLayer(label);
+                              
                             }
                         });
 
